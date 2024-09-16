@@ -33,6 +33,7 @@ for numero in numeros:
         quantidade_negativos += 1
     elif numero > 0:
         quantidade_positivos += 1
+        
     if numero > maior_numero:
         maior_numero = numero
     if numero < menor_numero:
@@ -45,15 +46,16 @@ media_pares = soma_pares / quantidade_pares if quantidade_pares > 0 else 0
 media_impares = soma_impares / quantidade_impares if quantidade_impares > 0 else 0
 media_geral = soma_geral / 5
 
-# Mostrando números na ordem inversa
 numero_invertidos = list(reversed(numeros))
 
-# Imprimindo as estatísticas
+
 print("\n====== Estatísticas dos números =======")
-print(f"Quantidade de pares: {quantidade_pares}")
+
+print(f"\nQuantidade de pares: {quantidade_pares}")
 print(f"Quantidade de ímpares: {quantidade_impares}")
 print(f"Quantidade de positivos: {quantidade_positivos}")
 print(f"Quantidade de negativos: {quantidade_negativos}")
+print(f"Quantidade de números inseridos: {len(numeros)}")
 print(f"Maior número: {maior_numero}")
 print(f"Menor número: {menor_numero}")
 print(f"Média dos números pares: {media_pares:.2f}")
